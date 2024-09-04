@@ -20,7 +20,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-20 bg-white bg-opacity-5 py-2 sm:py-4 md:py-6 lg:py-7 xl:py-7">
+    <nav className="fixed top-0 left-0 w-full z-30 bg-white bg-opacity-5 py-2 sm:py-4 md:py-6 lg:py-7 xl:py-7">
       <div className="flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Brand Name */}
         <a
