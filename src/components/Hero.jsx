@@ -1,55 +1,43 @@
-import React from 'react';
+import React from "react";
+import heroImage from "../assets/images/hero.png";
 
 const Hero = () => {
   return (
-    <div className="h-screen flex justify-center items-center relative">
-      {/* Background Image */}
-      <img
-        src="./images/hero.jpg"
-        alt="Background Image"
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      />
-
-      {/* Left Column */}
-      <div
-        className="w-1/2 h-full flex justify-center items-center "
-        style={{ backgroundColor: '#233942' }}
-      >
-        <div className="text-center">
-          <h1
-            className="text-90 font-cormorant text-white"
-            style={{ fontFamily: 'Cormorant', fontSize: 90 }}
-          >
-            photo graphy
-          </h1>
-        </div>
-      </div>
-
-      {/* Right Column */}
-      <div className="w-1/2 h-full flex flex-col justify-end">
-        <p
-          className="text-22 font-lato text-white mb-10"
-          style={{ fontFamily: 'Lato', fontSize: 22 }}
+    <section className="relative w-full h-screen m-0 p-0 flex items-center justify-center">
+      {/* <!-- Background Image --> */}
+      <div className="relative w-full h-full flex flex-grow">
+        {/* <!-- Left Column --> */}
+        <div className="flex-1 flex justify-center items-center"
+         style={{backgroundColor: "#233942"}}
         >
-          Pellentesque mauris a lobortis in bibendum sed lobortis semper. Eget eu vel eu vitae.
-        </p>
-
-        {/* Order Now Button */}
-        <div className="flex justify-center mb-10">
-          <button
-            className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
-            style={{ backgroundColor: '#FFC107', borderColor: '#FFC107' }}
-          >
-            Order Now
-          </button>
+          {/* <!-- Content for the left column --> */}
         </div>
 
-        {/* Social Media Nav Component */}
-        <div className="h-10 bg-black flex justify-end items-center">
-          {/* Social media links will go here */}
+        {/* <!-- Right Column --> */}
+        <div className="flex-1 flex justify-centeritems-center">
+          {/* <!-- Content for the right column --> */}
         </div>
       </div>
-    </div>
+
+      {/* <!-- Image --> */}
+      <div className="absolute inset-0 flex justify-center items-center z-10">
+        <img
+          src={heroImage}
+          alt="Background"
+          style={{
+            objectPosition: "center",
+          }}
+          className="object-cover max-w-none h-auto"
+        />
+      </div>
+
+      {/* <!-- Button --> */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+        <button className="bg-blue-500 text-white px-4 py-2 rounded">
+          Click Me
+        </button>
+      </div>
+    </section>
   );
 };
 
