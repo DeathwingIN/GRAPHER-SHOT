@@ -7,15 +7,55 @@ const Hero = () => {
       <div className="relative w-full h-full flex flex-grow ">
         {/* <!-- Left Column --> */}
         <div
-          className="flex-1 flex justify-center items-center "
+          className="flex-1 flex justify-center items-center"
           style={{ backgroundColor: "#233942" }}
         >
-          {/* <!-- Content for the left column --> */}
+          <div className="uppercase">
+            <h1
+              style={{
+                color: "white",
+                fontFamily: "Cormorant, serif",
+                fontSize: "90px",
+              }}
+            >
+              Photo
+            </h1>
+            <h1
+              className="-mt-10 ml-28"
+              style={{
+                color: "white",
+                fontFamily: "Cormorant, serif",
+                fontSize: "90px",
+              }}
+            >
+              graphy
+            </h1>
+          </div>
         </div>
 
         {/* <!-- Right Column --> */}
-        <div className="flex-1 flex justify-centeritems-center">
-          {/* <!-- Content for the right column --> */}
+        <div className="flex-1 flex flex-col justify-center items-center">
+          <div
+            style={{
+              maxHeight: "96px", 
+              width: "380px", 
+             
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "Lato, sans-serif",
+                fontSize: "22px",
+                color: "white",
+                margin: "0",
+                position: "relative",
+                bottom: "-100px",
+              }}
+            >
+              Pellentesque mauris a lobortis in bibendum <b />
+              sed lobortis semper. Eget eu vel eu vitae.
+            </p>
+          </div>
         </div>
       </div>
 
