@@ -4,11 +4,11 @@ import heroImage from "../assets/images/hero.png";
 const Hero = () => {
   return (
     <section className="relative w-full h-screen m-0 p-0 flex items-center justify-center">
-      {/* <!-- Background Image --> */}
-      <div className="relative w-full h-full flex flex-grow">
+      <div className="relative w-full h-full flex flex-grow ">
         {/* <!-- Left Column --> */}
-        <div className="flex-1 flex justify-center items-center"
-         style={{backgroundColor: "#233942"}}
+        <div
+          className="flex-1 flex justify-center items-center "
+          style={{ backgroundColor: "#233942" }}
         >
           {/* <!-- Content for the left column --> */}
         </div>
@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
 
       {/* <!-- Image --> */}
-      <div className="absolute inset-0 flex justify-center items-center z-10">
+      <div className="absolute  flex justify-center items-center z-10 -mt-10">
         <img
           src={heroImage}
           alt="Background"
