@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'lato': ['Lato', 'sans-serif'],
+        'cormorant': ['Cormorant', 'serif'],
       },
     },
   },
