@@ -58,17 +58,12 @@ const Hero = () => {
         </div>
 
         {/* Vertical Divider */}
-        <div
-          className="w-px h-40 mt-2 bg-[#233942]"
-         
-        ></div>
+        <div className="w-px h-40 mt-2 bg-[#233942]"></div>
       </div>
 
       <div className="relative w-full h-full  flex-grow hidden sm:flex">
         {/* Left Column: Title */}
-        <div
-          className="flex-1 flex justify-center items-center  bg-[#233942]"
-        >
+        <div className="flex-1 flex justify-center items-center  bg-[#233942]">
           <div className="uppercase">
             <h1
               style={{
@@ -113,12 +108,12 @@ const Hero = () => {
       </div>
 
       {/* Background Image */}
-      <div className="absolute flex justify-center items-center z-5 -mt-10">
+      <div className="absolute inset-0 flex justify-center items-center z-5">
         <img
           src={heroImage}
           alt="Background"
-          className="object-cover max-w-none h-auto"
-          style={{ objectPosition: "center" }}
+          className="w-full h-full object-none"
+          style={{ objectFit: "none", objectPosition: "center" }}
         />
       </div>
 
