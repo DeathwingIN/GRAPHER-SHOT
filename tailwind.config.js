@@ -10,6 +10,11 @@ module.exports = {
         'lato': ['Lato', 'sans-serif'],
         'cormorant': ['Cormorant', 'serif'],
       },
+      fontWeight: {
+        'extra-light': 300,
+        'extra-bold': 800,
+        // Add other custom weights as needed
+      },
     },
   },
   plugins: [],
