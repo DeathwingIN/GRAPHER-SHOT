@@ -17,9 +17,24 @@ export default function Gallery() {
       content:
         "https://images.pexels.com/photos/758898/pexels-photo-758898.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
-    { id: 6, category: "Product", content: "https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 7, category: "Food", content: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-    { id: 8, category: "Fashion", content: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    {
+      id: 6,
+      category: "Product",
+      content:
+        "https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 7,
+      category: "Food",
+      content:
+        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 8,
+      category: "Fashion",
+      content:
+        "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
     {
       id: 9,
       category: "Wedding",
@@ -124,12 +139,25 @@ export default function Gallery() {
               </div>
 
               <div
-                className=" md:row-span-1 hidden md:block bg-cover bg-center"
+                className="md:row-span-1  flex bg-cover bg-center items-center justify-center"
                 style={{
                   backgroundImage:
-                    "url(https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "url(https://images.pexels.com/photos/6266674/pexels-photo-6266674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
                 }}
-              ></div>
+              >
+                <button className="text-white py-1 px-10 rounded bg-white bg-opacity-20 border-none flex flex-col items-center justify-center">
+                See More
+                  <span className="material-icons text-white text-[16px] ">
+                    arrow_forward
+                  </span>
+                </button>
+              </div>
+
+
+
+
+
+
             </div>
             <div
               className=" p-2  hidden md:block md:col-span-1 bg-cover bg-center"
