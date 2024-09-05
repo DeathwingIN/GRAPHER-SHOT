@@ -1,23 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 5;
+  const [itemsToShow, setItemsToShow] = useState(5); // Start with 5 for larger screens
+
+  // Dynamically adjust itemsToShow based on screen size
+  useEffect(() => {
+    const updateItemsToShow = () => {
+      if (window.innerWidth < 768) {
+        setItemsToShow(1); // Show 1 image on mobile
+      } else if (window.innerWidth < 1024) {
+        setItemsToShow(3); // Show 3 images on tablets
+      } else {
+        setItemsToShow(5); // Show 5 images on larger screens
+      }
+    };
+
+    window.addEventListener("resize", updateItemsToShow);
+    updateItemsToShow(); // Set initial value on load
+
+    return () => {
+      window.removeEventListener("resize", updateItemsToShow);
+    };
+  }, []);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex - 1;
-      return newIndex < 0 ? 0 : newIndex; 
-    });
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex + 1;
-      const maxIndex = Math.max(0, images.length - itemsToShow);
-      return newIndex > maxIndex ? maxIndex : newIndex; 
+      const maxIndex = images.length - itemsToShow;
+      return Math.min(prevIndex + 1, maxIndex);
     });
   };
 
@@ -36,7 +52,7 @@ const Carousel = ({ images }) => {
             className="carousel-content"
             style={{
               transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
-              width: `${100 * Math.ceil(images.length / itemsToShow)}%`, // Set width for all images
+              width: `${100 * Math.ceil(images.length / itemsToShow)}%`,
             }}
           >
             {images.map((image, index) => (
@@ -63,7 +79,7 @@ const Carousel = ({ images }) => {
           className="carousel-button prev bg-transparent text-white py-2 px-2 rounded-full border-white border flex items-center justify-center"
           onClick={handleNext}
           aria-label="Next Slide"
-          disabled={currentIndex >= images.length - itemsToShow + 1} // Disable button if at the last image
+          disabled={currentIndex >= images.length - itemsToShow}
         >
           <span className="material-icons text-white text-[16px]">
             arrow_forward
