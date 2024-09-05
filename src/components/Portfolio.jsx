@@ -1,21 +1,61 @@
 import React, { useState } from "react";
+import Carousel from "./reusableComponents/Carousel";
 
 export default function Gallery() {
   const [activeTab, setActiveTab] = useState("All");
 
   const galleryItems = [
-    { id: 1, category: "Wedding", content: "Wedding Image 1" },
-    { id: 2, category: "Product", content: "Product Image 1" },
-    { id: 3, category: "Food", content: "Food Image 1" },
-    { id: 4, category: "Fashion", content: "Fashion Image 1" },
-    { id: 5, category: "Wedding", content: "Wedding Image 2" },
-    { id: 6, category: "Product", content: "Product Image 2" },
-    { id: 7, category: "Food", content: "Food Image 2" },
-    { id: 8, category: "Fashion", content: "Fashion Image 2" },
-    { id: 9, category: "Wedding", content: "Wedding Image 3" },
-    { id: 10, category: "Product", content: "Product Image 3" },
-    { id: 11, category: "Food", content: "Food Image 3" },
-    { id: 12, category: "Fashion", content: "Fashion Image 3" },
+    {
+      id: 1,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/247287/pexels-photo-247287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 5,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/758898/pexels-photo-758898.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    { id: 6, category: "Product", content: "https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 7, category: "Food", content: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    { id: 8, category: "Fashion", content: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+    {
+      id: 9,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 10,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 11,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 12,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 13,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 14,
+      category: "Wedding",
+      content:
+        "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
     // Add more images as needed
   ];
 
@@ -56,80 +96,95 @@ export default function Gallery() {
       >
         {activeTab === "All" ? (
           <>
-            <div className=" p-4  grid-cols-span-2 grid grid-cols-1  gap-4 md:col-span-2">
-              <div className=" md:row-span-3 grid grid-cols-1 md:grid-cols-3">
-                <div className="col-span-1 p-4">
-                  <img 
-                    src="https://images.pexels.com/photos/371985/pexels-photo-371985.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt=""
-                  />
-                </div>
-                <div className="col-span-2 p-4 md:grid md:grid-rows-2  hidden  ">
-                  <div className="row-span-1 ">
-                    <img 
-                      src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                      alt=""
-                    />
-                  </div>
-                  <div className="row-span-1 ">
-                    <img 
-                      src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                      alt=""
-                    />
-                  </div>
+            <div className="  grid-cols-span-2 grid grid-cols-1  gap-4 md:col-span-2 h-screen">
+              <div className=" md:row-span-3 grid grid-cols-1 md:grid-cols-3 ">
+                <div
+                  className="col-span-1  g-cover bg-center"
+                  style={{
+                    backgroundImage:
+                      "url(https://images.pexels.com/photos/371985/pexels-photo-371985.jpeg?auto=compress&cs=tinysrgb&w=600)",
+                  }}
+                ></div>
+                <div className="col-span-2 pl-3 md:grid md:grid-rows-2  hidden gap-4  ">
+                  <div
+                    className="row-span-1 bg-cover  bg-center"
+                    style={{
+                      backgroundImage:
+                        "url(https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                    }}
+                  ></div>
+                  <div
+                    className="row-span-1 bg-cover bg-center "
+                    style={{
+                      backgroundImage:
+                        "url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    }}
+                  ></div>
                 </div>
               </div>
 
-              <div className=" md:row-span-1 hidden md:block">
-                <img  
-                  src="https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-                />
+              <div
+                className=" md:row-span-1 hidden md:block bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url(https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                }}
+              ></div>
+            </div>
+            <div
+              className=" p-2  hidden md:block md:col-span-1 bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  "url(https://images.pexels.com/photos/27947208/pexels-photo-27947208/free-photo-of-vietcombank-tower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+              }}
+            >
+              <img src="" alt="" />
+            </div>
+            <div className=" h-full hidden md:grid grid-cols-1 gap-4 md:col-span-1">
+              <div
+                className="md:row-span-1 bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url(https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                }}
+              ></div>
+              <div
+                className="md:row-span-1 bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url(https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                }}
+              >
+                <img src="" alt="" />
               </div>
             </div>
-
-            <div className=" p-4  hidden md:block md:col-span-1">
-              <img 
-                src="https://images.pexels.com/photos/27947208/pexels-photo-27947208/free-photo-of-vietcombank-tower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=""
-              />
-            </div>
-            <div className=" p-4 h-full hidden md:grid grid-cols-1 gap-4 md:col-span-1">
-              <div className="md:row-span-1">
-                <img
-                  src="https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-                />
-              </div>
-              <div className="md:row-span-1">
-                <img
-                  src="https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className=" p-4 h-full hidden md:grid grid-cols-1 gap-4 md:col-span-1">
-              <div className=" md:row-span-1">
-                <img
-                  src="https://images.pexels.com/photos/247287/pexels-photo-247287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-                />
-              </div>
-              <div className=" md:row-span-3">
-                <img
-                  src="https://images.pexels.com/photos/2010877/pexels-photo-2010877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt=""
-                />
-              </div>
+            <div className="  h-full hidden md:grid grid-cols-1 gap-4 md:col-span-1">
+              <div
+                className=" md:row-span-1 bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url(https://images.pexels.com/photos/247287/pexels-photo-247287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                }}
+              ></div>
+              <div
+                className=" md:row-span-3 bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url(https://images.pexels.com/photos/2010877/pexels-photo-2010877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+                }}
+              ></div>
             </div>
           </>
         ) : (
           filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="p-4 border border-gray-300 bg-gray-100"
-            >
-              {item.content}
+            <div className="grid  h-[200px] md:h-[400px] ">
+              <div
+                key={item.id}
+                className="h-full bg-cover bg-center  "
+                style={{
+                  backgroundImage: `url(${item.content})`,
+                }}
+              ></div>
             </div>
           ))
         )}
