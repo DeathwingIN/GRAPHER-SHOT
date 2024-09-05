@@ -1,0 +1,43 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    width: 100%;
+  }
+  
+  .carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    flex: 0 0 calc(100% / 4); 
+    box-sizing: border-box; 
+    padding-right: 20px; 
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto; 
+    max-width: 100%; 
+    max-height: 358px;
+  }
+  
+  
+  
+  @media (max-width: 1024px) { /* Adjust as needed for your breakpoints */
+    .carousel-content {
+      width: calc(100% * 1); /* Show 1 image at a time on smaller screens */
+    }
+  
+    .carousel-item {
+      flex: 0 0 100%; /* Full width for each item */
+      padding-right: 0; /* Remove spacing on smaller screens */
+    }
+  }
+  
