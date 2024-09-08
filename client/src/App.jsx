@@ -22,7 +22,9 @@ function App() {
       <Testimonials></Testimonials>
       <Pricelist></Pricelist>
       <Form></Form>
-      <Footer />
+      <div className="md:-mt-20 -mt-8">
+        <Footer />
+      </div>
     </>
   );
 }
