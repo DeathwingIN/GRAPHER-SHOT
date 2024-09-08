@@ -17,10 +17,8 @@ app.use(
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "imeshnirmal1u@gmail.com",
-    pass: "sayn jhta ukjp ychu",
-    // user: process.env.EMAIL_USER,
-    // pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -32,10 +30,9 @@ app.post("/subscribe", (req, res) => {
   const { email } = req.body;
 
   const mailOptions = {
-    from: "imeshnirmal1u@gmail.com",
-    to: "imeshnirmal1u@gmail.com",
-    // from: process.env.EMAIL_USER,
-    // to: process.env.TO_EMAIL,
+  
+    from: process.env.EMAIL_USER,
+    to: process.env.TO_EMAIL,
     subject: "More prices",
     text: `You have a new subscriber: ${email}`,
   };
