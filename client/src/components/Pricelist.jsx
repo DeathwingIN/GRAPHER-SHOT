@@ -51,8 +51,8 @@ export default function Pricelist() {
       ],
     },
     {
-      title: "Standard",
-      price: "400$",
+      title: "bg-white bg-opacity-20",
+      price: "600$",
       details: [
         { label: "duration", value: "6 hours" },
         { label: "lots of photos", value: "unlimited" },
