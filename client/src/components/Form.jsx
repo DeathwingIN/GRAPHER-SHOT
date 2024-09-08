@@ -1,9 +1,11 @@
 // src/Form.js
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Modal from './reusableComponents/model';
 
 export default function Form() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,6 +27,12 @@ export default function Form() {
     } catch (error) {
       setMessage('Error occurred. Please try again later.');
     }
+
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -45,7 +53,7 @@ export default function Form() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="p-2 flex-grow  text-black md:w-full"
+                className="p-2 flex-grow text-black md:w-full"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -64,13 +72,13 @@ export default function Form() {
           * By clicking “Submit” button, you agree to our Terms and that you
           have read our Data Use Policy.
         </div>
-
-        {message && (
-          <div className="text-center text-white mt-4">
-            {message}
-          </div>
-        )}
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        message={message}
+      />
     </section>
   );
 }
