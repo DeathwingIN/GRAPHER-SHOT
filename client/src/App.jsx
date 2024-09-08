@@ -9,10 +9,12 @@ import Form from "./components/Form";
 import Pricelist from "./components/Pricelist";
 import Testimonials from "./components/Testimonials";
 import Why from "./components/Why";
+import WhatsAppButton from "./components/reusableComponents/WhatsAppButton";
 
 function App() {
   return (
     <>
+    <WhatsAppButton />
       <Navbar />
       <Hero />
       <About />
