@@ -9,8 +9,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    // origin: 'http://localhost:5173', // Update with your React frontend URL
-    origin: "https://grapher-shot.vercel.app", // Update with your React frontend URL
+    origin: 'http://localhost:5173', // Update with your React frontend URL
+    // origin: "https://grapher-shot.vercel.app", // Update with your React frontend URL
   })
 );
 

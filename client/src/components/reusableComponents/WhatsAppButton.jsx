@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
       onClick={handleClick}
       className="fixed bottom-8 right-8 py-1 px-5 text-white rounded  shadow-lg hover:bg-green-600 transition duration-300 text-[32px] z-50"
     >
-      <i className="fab fa-whatsapp"></i> {/* Ensure Font Awesome is included in your project for this icon */}
+      <i className="fab fa-whatsapp"></i> 
     </button>
   );
 };
