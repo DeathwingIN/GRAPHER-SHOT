@@ -1,5 +1,3 @@
-Here is a simple README file template for your web project, including the installation guide and configuration steps:
-
 ---
 
 # Photographer Website Project
@@ -90,5 +88,3 @@ node server.js
 If you encounter any issues or have questions, feel free to contact the project owner at imeshnirmal1u@gmail.com.
 
 ---
-
-This README provides a basic guide to set up and run the project. Let me know if you'd like to add or modify any sections!
